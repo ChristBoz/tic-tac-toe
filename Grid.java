@@ -83,12 +83,12 @@ public class Grid {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("\n  A   B   C\n"); // Column labels at the top
+        sb.append("\n  A   B   C\n"); // Column labels at the top.
 
         for (int i = 0; i < 3; i++) {
-            sb.append(i + 1).append(" "); // Row labels on the left
+            sb.append(i + 1).append(" "); // Row labels on the left.
             for (int j = 0; j < 3; j++) {
-                sb.append(board[j][i].getSymbol().getSymbol()); // Swap row and column
+                sb.append(board[j][i].getSymbol().getSymbol()); // Swap row and column.
                 if (j < 2) {
                     sb.append(" | ");
                 }
