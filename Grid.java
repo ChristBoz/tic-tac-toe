@@ -1,3 +1,4 @@
+
 package tictactoe;
 
 /**
@@ -78,15 +79,16 @@ public class Grid {
         return true;
     }
 
+ 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("\n  1   2   3\n");
-        char[] rowLabels = {'A', 'B', 'C'};
+        sb.append("\n  A   B   C\n"); // Column labels at the top
+
         for (int i = 0; i < 3; i++) {
-        	sb.append(rowLabels[i]).append(" ");
+            sb.append(i + 1).append(" "); // Row labels on the left
             for (int j = 0; j < 3; j++) {
-                sb.append(board[i][j].getSymbol().getSymbol());
+                sb.append(board[j][i].getSymbol().getSymbol()); // Swap row and column
                 if (j < 2) {
                     sb.append(" | ");
                 }
@@ -98,6 +100,7 @@ public class Grid {
         }
         return sb.toString();
     }
+
     public void display() {
         System.out.println(this.toString()); // Display the grid.
     }
