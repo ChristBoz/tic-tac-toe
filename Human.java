@@ -21,8 +21,8 @@ public class Human extends Player {
                 continue;
             }
 
-            char colChar = input.charAt(0); // First char is column (A, B, C)
-            char rowChar = input.charAt(1); // Second char is row (1, 2, 3)
+            char colChar = input.charAt(0); // First char is column (A, B, C).
+            char rowChar = input.charAt(1); // Second char is row (1, 2, 3).
 
             if (colChar < 'A' || colChar > 'C' || rowChar < '1' || rowChar > '3') {
                 System.out.println("Invalid input! Try again (Enter a letter A-C and a number 1-3).");
@@ -32,8 +32,8 @@ public class Human extends Player {
             int column = colChar - 'A'; // A -> 0, B -> 1, C -> 2
             int row = rowChar - '1';    // 1 -> 0, 2 -> 1, 3 -> 2
 
-            if (grid.isValidMove(column, row)) { // Swapped row & column
-                grid.placeSymbol(column, row, symbol); // Swapped row & column
+            if (grid.isValidMove(column, row)) { // Swapped row & column.
+                grid.placeSymbol(column, row, symbol); // Swapped row & column.
                 break;
             } else {
                 System.out.println("Invalid move, try again.");
