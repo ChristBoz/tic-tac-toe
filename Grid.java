@@ -80,26 +80,26 @@ public class Grid {
     }
 
  
-    @Override
+   @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("\n  A   B   C\n"); // Column labels at the top.
+        String result = "\n  A   B   C\n"; // Column labels at the top.
 
         for (int i = 0; i < 3; i++) {
-            sb.append(i + 1).append(" "); // Row labels on the left.
+            result += (i + 1) + " "; // Row labels on the left.
             for (int j = 0; j < 3; j++) {
-                sb.append(board[j][i].getSymbol().getSymbol()); // Swap row and column.
+                result += board[j][i].getSymbol().getSymbol();
                 if (j < 2) {
-                    sb.append(" | ");
+                    result += " | ";
                 }
             }
-            sb.append("\n");
+            result += "\n";
             if (i < 2) {
-                sb.append(" ---+---+---\n");
+                result += " ---+---+---\n";
             }
         }
-        return sb.toString();
+        return result;
     }
+
 
     public void display() {
         System.out.println(this.toString()); // Display the grid.
